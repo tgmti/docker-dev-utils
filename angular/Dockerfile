@@ -1,4 +1,4 @@
-FROM node:12.8.0-alpine
+FROM node:12.8.1-buster-slim
 
 LABEL maintainer="Thiago Mota <tgmspawn@gmail.com>"
 LABEL version="0.0.1"
