@@ -1,4 +1,4 @@
-FROM tgmti/angular:0.0.1
+FROM tgmti/angular:0.0.1-buster
 
 LABEL maintainer="Thiago Mota <tgmspawn@gmail.com>"
 LABEL version="0.0.1"
