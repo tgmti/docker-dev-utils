@@ -28,6 +28,8 @@ RUN npm install @portinari/portinari-templates
 
 RUN sed -i 's/ng serve/ng serve --host 0.0.0.0/g' package.json
 
+RUN sed -i 's/AppName/TGM Portinari Docker/g' ./src/app/app.component.html
+
 COPY ./start.sh /
 RUN chmod 777 /start.sh
 
