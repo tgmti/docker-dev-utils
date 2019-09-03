@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+
+  ionic-dev:
+    image: tgmti/ionic:0.0.1-buster
+    ports: 
+      - 8100:8100
+      - 4200:4200
+    volumes: 
+      - .:/app
+      - node_modules:/app/node_modules
+    tty: true
+    environment: 
+      - INIT_IONIC_SERVER=false
+ 
+volumes: 
+  node_modules:
