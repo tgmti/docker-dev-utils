@@ -9,5 +9,6 @@ RUN apt update && \
     apt install -y yarn
 
 RUN npm install -g @angular/cli
+RUN npm install -g npm-add-script
 
 CMD ["/bin/sh"]
