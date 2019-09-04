@@ -9,7 +9,12 @@ fi
 
 if $INIT_IONIC_SERVER ; then
     echo "Starting ionic Server..."
-    npm run ionicserve
+    
+    if $INIT_IONIC_LAB ; then
+        npm run ionicserve
+    else
+        npm run ioniclab
+    fi
 else
     bash
 fi

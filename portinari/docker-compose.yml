@@ -3,16 +3,16 @@ version: "3.7"
 services:
 
   portinari:
-    image: tgmti/portinari:0.0.1-buster
+    image: tgmti/portinari:0.0.2
     build: .
     ports:
       - 4200:4200
     volumes:
-      - .:/app
+      - ./app:/app
       - node_modules:/app/node_modules
     tty: true
     environment:
-      - INIT_IONIC_SERVER=false
+      - INIT_NG_SERVER=false
 
 volumes:
   node_modules:

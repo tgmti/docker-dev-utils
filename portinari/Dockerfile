@@ -1,10 +1,10 @@
 FROM node:12.8.1-buster-slim
 
 LABEL maintainer="Thiago Mota <tgmspawn@gmail.com>"
-LABEL version="0.0.1"
+LABEL version="0.0.2"
 LABEL title="Portinari Start Container"
-LABEL description="A started Portinari project"
-LABEL "https://portinari.io"="Portinari UI"
+LABEL description="Started Angular project with Portinari UI"
+LABEL vendor="http://portinari.io"
 
 # Determina se vai iniciar o Server ao criar/iniciar o container
 ENV INIT_NG_SERVER=true
@@ -26,7 +26,7 @@ RUN npm install
 RUN ng add @portinari/portinari-ui
 RUN npm install @portinari/portinari-templates
 
-RUN sed -i 's/ng serve/ng serve --host 0.0.0.0/g' package.json
+RUN npmAddScript -f -k start -v "ng serve --host 0.0.0.0"
 
 RUN sed -i 's/AppName/TGM Portinari Docker/g' ./src/app/app.component.html
 
